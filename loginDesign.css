@@ -1,16 +1,17 @@
-.bg-secondary {
-    background-color: #ddefff!important;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.mt-5, .my-5 {
-    margin-top: 0!important;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddefff!important;
 }
 
 .container {
-  width: 90%;
-  height: 60%;
-  max-width: 320px;
-  max-height: 420px;
   background: #fff;
   color: #636363;
   top: 50%;
@@ -18,7 +19,9 @@
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 55px 40px 60px;
+  padding: 2.5rem 3rem;
+  border: 1px solid #9fbfc6;
+  border-radius: 15px;
   font: caption;
 }
 
@@ -30,26 +33,15 @@
   font-size: 1.7rem;
 }
 
-.container input {
+.container input[type="text"], .container input[type="password"] {
   width: 100%;
   margin-bottom: 35px;
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -100px;
-  left: calc(50% - 50px);
-}
-
-.container input[type="text"], .container input[type="password"] {
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #636363;
   background: transparent;
   outline: none;
   height: 40px;
-  color: #636363;
+  color: #2e2e2e;
   font-size: 16px;
 }
 
@@ -57,7 +49,7 @@ input::placeholder {
   color: rgb(200, 200, 200);
 }
 
-.container input[type="submit"] {
+.boton_enviar {
   border: none;
   outline: none;
   height: 40px;
@@ -67,27 +59,31 @@ input::placeholder {
   border-radius: 5px;
   width: 50%;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto 2rem auto;
+}
+
+.boton_registrarse {
+  text-align: center;
+  border: none;
+  height: 40px;
+  background: none;
+  color: #266874;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+  width: 50%;
+  display: block;
+  margin: 1.5rem auto 0 auto;
 }
 
 .container input[type="submit"]:hover {
   cursor: pointer;
-  background: #52787e;
+  background: #185761;
   color: rgb(255, 255, 255);
 }
 
-.container a {
-  text-decoration: none;
-  font-size: 12px;
-  line-height: 20px;
-  color: rgb(213, 212, 212);
-}
-
-.container a:hover {
-  color: #fff;
-}
-
-.border {
-    border: 1px solid #9fbfc6;
-    border-radius: 15px;
+@media screen and (max-width: 1030px) {
+  .container {
+    width: 90%;
+  }
 }
