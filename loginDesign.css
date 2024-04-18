@@ -11,7 +11,7 @@ body {
   background-color: #ddefff!important;
 }
 
-.container {
+.container1 {
   background: #fff;
   color: #636363;
   top: 50%;
@@ -26,14 +26,14 @@ body {
 }
 
 
-.container h1 {
+.container1 h1 {
   margin: 0;
   padding: 0 0 35px;
   text-align: center;
   font-size: 1.7rem;
 }
 
-.container input[type="text"], .container input[type="password"] {
+.container1 input[type="text"], .container1 input[type="password"] {
   width: 100%;
   margin-bottom: 35px;
   border: none;
@@ -76,14 +76,14 @@ input::placeholder {
   margin: 1.5rem auto 0 auto;
 }
 
-.container input[type="submit"]:hover {
+.container1 input[type="submit"]:hover {
   cursor: pointer;
   background: #185761;
   color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 1030px) {
-  .container {
+  .container1 {
     width: 90%;
   }
 }

@@ -20,24 +20,54 @@
     </script>
 </head>
 
-<body>
-    <div class="container">
-        <form action="/login" method="POST" onsubmit="return validarFormulario()">
-            <h1>Iniciar sesión</h1>
-            <label for="">Username:</label>
-            <input type="text" name="username" id="username">
-            <!--<input type="text" placeholder="Ingresa tu nombre" name="nombre">-->
-            <br>
-            <label for="">Password:</label>
-            <input type="password" name="password" id="password">
-            <!--<input type="password" placeholder="Ingresa tu ID" name="id">-->
-            <br>
-            <input type="submit" value="Enviar" class="boton_enviar">
-            <hr class="x-component x-component-default" style="border-color:#ececec;margin:auto;width:60%;" id="box-1034">
-            <a class="boton_registrarse" href="">Registrarse</a>  
-        </form>
-    </div>
-
+<body>        
+        <div class="container1" id="initialContent">
+            <!-- Contenido inicial -->
+            <form action="/login" method="POST" onsubmit="return validarFormulario()">
+                <h1>Iniciar sesión</h1>
+                <label for="">Username:</label>
+                <input type="text" name="username" id="username">
+                <br>
+                <label for="">Password:</label>
+                <input type="password" name="password" id="password">
+                <br>
+                <input type="submit" value="Enviar" class="boton_enviar">
+                <hr class="x-component x-component-default" style="border-color:#ececec;margin:auto;width:60%;" id="box-1034">
+                <a href="#" class="boton_registrarse" onclick="showRegistrationOptions()">Registrarse</a>
+            </form>
+        </div>
+        <div class="container2" id="registrationOptions" style="display: none;">
+                <form>
+                <h1>Registro de alumno</h1>
+                <label for="">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <label for="">Apellido paterno:</label>
+                <input type="text" name="apellidoPaterno" id="apellidoPaterno">
+                <br>
+                <label for="">Apellido materno:</label>
+                <input type="text" name="apellidoMaterno" id="apellidoMaterno">
+                <br>
+                <label for="">Expediente:</label>
+                <input type="number" name="expediente" id="expediente">
+                <br>
+                <label for="">Carrera:</label>
+                <select name="carrera" id="carrera">
+                    <option value="option1">option1</option>  
+                    <option value="option2">option2</option>  
+                    <option value="option3">option3</option>
+                </select>
+                <br>
+                <label for="">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br>
+                <label for="">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required>
+                <br>
+                <input type="submit" value="Enviar" class="boton_enviar">
+                <button type="button" class="button-regresar" onclick="showInitialContent()">Regresar</button>
+                </form>
+        </div>
+        <script src="registration_options.js"></script>
 </body>
-
 </html>
