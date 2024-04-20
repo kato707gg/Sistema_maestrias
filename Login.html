@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UAQ Maestrias</title>
     <link rel="stylesheet" href="loginDesign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script>
         function validarFormulario() {
             var username = document.getElementById("username").value;
@@ -37,37 +38,50 @@
             </form>
         </div>
         <div class="container2" id="registrationOptions" style="display: none;">
-                <form>
-                <h1>Registro de alumno</h1>
-                <label for="">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-                <br>
-                <label for="">Apellido paterno:</label>
-                <input type="text" name="apellidoPaterno" id="apellidoPaterno">
-                <br>
-                <label for="">Apellido materno:</label>
-                <input type="text" name="apellidoMaterno" id="apellidoMaterno">
-                <br>
-                <label for="">Expediente:</label>
-                <input type="number" name="expediente" id="expediente">
-                <br>
-                <label for="">Carrera:</label>
-                <select name="carrera" id="carrera">
-                    <option value="option1">option1</option>  
-                    <option value="option2">option2</option>  
-                    <option value="option3">option3</option>
-                </select>
-                <br>
-                <label for="">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-                <br>
-                <label for="">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required>
-                <br>
-                <input type="submit" value="Enviar" class="boton_enviar">
-                <button type="button" class="button-regresar" onclick="showInitialContent()">Regresar</button>
-                </form>
-        </div>
+            <h1>Registro de alumno</h1>
+            <h2 class="espacio">espacio</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><label for="apellidoPaterno">Apellido paterno:</label></td>
+                        <td><label for="apellidoMaterno">Apellido materno:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nombre" id="nombre" required></td>
+                        <td><input type="text" name="apellidoPaterno" id="apellidoPaterno" required></td>
+                        <td><input type="text" name="apellidoMaterno" id="apellidoMaterno" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="expediente">Expediente:</label></td>
+                        <td><label for="carrera">Carrera:</label></td>
+                        <td><label for="correo">Correo electrónico:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="expediente" id="expediente"required></td>
+                        <td>
+                            <select name="carrera" id="carrera"required>
+                                <option value="option1">Selecciona...</option> 
+                                <option value="option1">option1</option>  
+                                <option value="option2">option2</option>  
+                                <option value="option3">option3</option>
+                            </select>
+                        </td>
+                        <td><input type="email" name="correo" id="correo" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">Teléfono:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="telefono" id="telefono" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Guardar" class="boton_enviar">
+                <button type="button" class="boton_regresar" onclick="showInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Regresar
+                </button>
+            </form>
+        </div>        
         <script src="registration_options.js"></script>
 </body>
 </html>

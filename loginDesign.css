@@ -11,7 +11,7 @@ body {
   background-color: #ddefff!important;
 }
 
-.container1 {
+.container1, .container2{
   background: #fff;
   color: #636363;
   top: 50%;
@@ -19,21 +19,31 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 2.5rem 3rem;
-  border: 1px solid #9fbfc6;
+  padding: 2.5rem;
+  border: 1px solid #9fb3c6;
   border-radius: 15px;
   font: caption;
 }
 
+.container1 input[type="submit"]:hover {
+  cursor: pointer;
+  background: #092F75;
+  color: rgb(255, 255, 255);
+}
 
-.container1 h1 {
+.container1 h1, .container2 h1 {
   margin: 0;
   padding: 0 0 35px;
   text-align: center;
   font-size: 1.7rem;
 }
 
-.container1 input[type="text"], .container1 input[type="password"] {
+.container2 h2 {
+  margin: 0;
+  padding: 0 35px;
+}
+
+.container1 input[type="text"], .container1 input[type="password"], .container2 input[type="text"], .container2 input[type="password"], .container2 input[type="number"], .container2 select, .container2 input[type="email"]{
   width: 100%;
   margin-bottom: 35px;
   border: none;
@@ -53,13 +63,14 @@ input::placeholder {
   border: none;
   outline: none;
   height: 40px;
-  background: #266874;
+  background: #134bb3;
   color: #fff;
   font-size: 18px;
   border-radius: 5px;
   width: 50%;
   display: block;
   margin: 1rem auto 2rem auto;
+  cursor: pointer;
 }
 
 .boton_registrarse {
@@ -67,19 +78,33 @@ input::placeholder {
   border: none;
   height: 40px;
   background: none;
-  color: #266874;
+  color: #134bb3;
   font-weight: bold;
   text-decoration: underline;
   font-size: 18px;
   width: 50%;
   display: block;
   margin: 1.5rem auto 0 auto;
+  cursor: pointer;
 }
 
-.container1 input[type="submit"]:hover {
+.boton_regresar {
+  background: none;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  color: #666666;
+  margin: 0 1rem;
   cursor: pointer;
-  background: #185761;
-  color: rgb(255, 255, 255);
+}
+
+td {
+  padding: 0 1rem;
+}
+
+.espacio {
+  color: #fff;
+  font-size: large;
 }
 
 @media screen and (max-width: 1030px) {
